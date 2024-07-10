@@ -79,8 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
     window.editCursos = (id, nombre, cantidad, precio) => {
         document.getElementById('cursosId').value = id;
         document.getElementById('nombre').value = nombre;
-        document.getElementById('cantidad').value = dictado_por;
-        document.getElementById('cantidad').value = fecha;
+        document.getElementById('dictado_por').value = dictado_por;
+        document.getElementById('fecha').value = fecha;
         document.getElementById('precio').value = precio;
         isUpdating = true;
     };
