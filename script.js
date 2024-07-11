@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const updateCursos = async (id, cursos) => {
-        await fetch(`https://Silaba70.pythonanywhere.com/actualizar_cursos/${id}`), {
+        await fetch(`https://Silaba70.pythonanywhere.com/actualizar_cursos/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -76,11 +76,11 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('cursosId').value = '';
     });
 
-    window.editCursos = (id, nombre, dictado_por, fecha, precio) => {
+    window.editCursos = (id, nombre, cantidad, precio) => {
         document.getElementById('cursosId').value = id;
         document.getElementById('nombre').value = nombre;
-        document.getElementById('dictado_por').value = dictado_por;
-        document.getElementById('fecha').value = fecha;
+        document.getElementById('cantidad').value = dictado_por;
+        document.getElementById('cantidad').value = fecha;
         document.getElementById('precio').value = precio;
         isUpdating = true;
     };
@@ -93,4 +93,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fetchCursos();
 });
-
